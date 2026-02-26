@@ -1,0 +1,125 @@
+.wrapper {
+  --gradient-border-width: 2px;
+  margin-left: 48px;
+  padding: var(--gradient-border-width);
+  border-radius: 8px;
+  background: var(--gradient-primary);
+  position: relative;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  /* Prevent sub-pixel rendering issues */
+  transform: translateZ(0);
+  will-change: transform;
+  &:hover {
+    background: var(--primary-6);
+    .wrapper__filter {
+      opacity: 1;
+    }
+    .content__button__wrapper {
+      background: var(--primary-6) !important;
+    }
+    .content__button {
+      color: var(--primary-6) !important;
+    }
+  }
+  &--selected {
+    background: var(--primary-6);
+    padding: var(--gradient-border-width);
+    .wrapper__filter {
+      opacity: 1;
+    }
+    .content__button__wrapper {
+      background: var(--primary-6) !important;
+    }
+    .content__button {
+      color: var(--primary-6) !important;
+    }
+  }
+  &__filter {
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    border-radius: calc(8px - var(--gradient-border-width));
+    position: absolute;
+    top: var(--gradient-border-width);
+    left: var(--gradient-border-width);
+    right: var(--gradient-border-width);
+    bottom: var(--gradient-border-width);
+    background: #fff;
+    opacity: 0.9;
+    z-index: 1;
+    box-sizing: border-box;
+    /* Ensure crisp rendering */
+    transform: translateZ(0);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 10; // Ensure content is above both gradient and filter
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--paddingMD);
+  }
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    padding: var(--paddingXXS) var(--paddingSM);
+    border: none !important;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+    &__wrapper {
+      padding: 2px;
+      border-radius: 50%;
+      transition: background 0.3s ease-in-out;
+      box-sizing: border-box;
+      /* Ensure crisp rendering */
+      transform: translateZ(0);
+      &:hover {
+        background: var(--primary-6) !important;
+      }
+    }
+  }
+  &__icon {
+    background: #fff;
+    padding: var(--padding);
+    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__title {
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 22px !important;
+    margin: 0 !important;
+    color: var(--colorText, #111820);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &__description {
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 22px !important;
+    color: var(--colorTextDescription, #485a6e) !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+}

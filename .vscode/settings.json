@@ -1,0 +1,11 @@
+{
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": true,
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.associations": {
+    "*.spec.ts": "typescript"
+  }
+}

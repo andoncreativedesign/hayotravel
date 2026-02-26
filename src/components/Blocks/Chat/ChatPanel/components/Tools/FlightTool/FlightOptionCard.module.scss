@@ -1,0 +1,75 @@
+.card {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--colorBorder);
+  background: var(--colorBgContainer);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  position: relative;
+  min-width: 500px;
+  &__divider {
+    margin: 16px 0 !important;
+    border-color: var(--colorBorder) !important;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 16px;
+    height: 40px;
+    &__price {
+      height: 40px;
+    }
+  }
+
+  &__local {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #485a6e !important;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.flightRow {
+  margin: 12px 0;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.airlineInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tag {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.code {
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+.stops {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.date {
+  font-size: 14px;
+}

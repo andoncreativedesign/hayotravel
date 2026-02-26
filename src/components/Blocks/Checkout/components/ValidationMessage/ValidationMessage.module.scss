@@ -1,0 +1,47 @@
+.validationMessage {
+  margin-bottom: 16px;
+  
+  .alert {
+    border-radius: 8px;
+    border: 1px solid var(--colorErrorBorder);
+    background-color: var(--colorErrorBG);
+    
+    .alertContent {
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+        
+        .icon {
+          width: 16px;
+          height: 16px;
+          color: var(--colorError);
+          flex-shrink: 0;
+        }
+        
+        .title {
+          font-weight: 600;
+          color: var(--colorErrorText);
+          font-size: 14px;
+        }
+      }
+    }
+    
+    .errorList {
+      margin: 0;
+      padding-left: 24px;
+      
+      .errorItem {
+        color: var(--colorErrorText);
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 4px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

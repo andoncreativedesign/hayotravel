@@ -1,0 +1,334 @@
+// Hotel item card
+.basketItem {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: var(--padding);
+  padding: var(--padding);
+  background: var(--colorBgContainer);
+  border: 1px solid var(--colorBorder);
+  border-radius: var(--borderRadiusLG);
+  margin-bottom: var(--padding);
+  
+  &.cancelled {
+    opacity: 0.6;
+    background: #f9f9f9;
+    border-color: #d9d9d9;
+    
+    .label,
+    .text,
+    .price,
+    .hotelName,
+    .dates {
+      color: #8c8c8c !important;
+    }
+    
+    .icon {
+      opacity: 0.5;
+    }
+  }
+}
+
+// Top section with title and actions
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--colorText);
+}
+
+.label {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 1.5em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconWithBg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  background: var(--colorBgContainer);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: var(--colorBgTextHover);
+  }
+}
+
+.actionIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--colorText);
+}
+
+// Content section
+.content {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 8px;
+}
+
+.dates {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.hotelName {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}
+
+.roomDetails {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+  white-space: pre-line;
+}
+
+// Expanded details section - Hotel card design
+.moreHotelDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.hotelCard {
+  display: flex;
+  gap: 12px;
+  background: var(--colorBgContainer);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hotelImage {
+  width: 147px;
+  height: 118px;
+  border-radius: 12px 8px 8px 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.imageElement {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotelContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  padding: 8px 0;
+}
+
+.roomHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.roomTitle {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 1.5em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.roomFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 341px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.featureIcon {
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureText {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}
+
+.checkInOutRow {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+}
+
+.checkInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkLabel {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}
+
+.checkTime {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.roomInfo {
+  display: flex;
+  flex-direction: column;
+  width: 298px;
+}
+
+.roomInfoItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.roomInfoIcon {
+  width: 12px;
+  height: 12px;
+  color: var(--colorTextSecondary);
+}
+
+.roomInfoText {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 1.67em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}
+
+// Divider
+.divider {
+  height: 1px;
+  background: var(--colorBorder);
+  align-self: stretch;
+}
+
+// Price section
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.taxesLabel {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  margin: 0 !important;
+}
+
+.priceAmount {
+  display: flex;
+  align-items: center;
+}
+
+.priceAmountAll {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.amount {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.amountAll {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.per {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}

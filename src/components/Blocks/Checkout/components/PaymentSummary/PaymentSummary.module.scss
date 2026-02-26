@@ -1,0 +1,120 @@
+// Main container
+.paymentSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 352px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+// Content container
+.content {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 16px;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid #EDEFF1;
+  border-radius: 8px;
+}
+
+// Title
+.title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #111820;
+}
+
+// Description section
+.description {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 8px;
+}
+
+// Row layout
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+// Left section of row
+.left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+// Label styling
+.label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5714285714285714em;
+  color: #111820;
+}
+
+// Subtext styling
+.subtext {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5714285714285714em;
+  color: #485A6E;
+}
+
+// Price styling
+.price {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5714285714285714em;
+  color: #111820;
+  white-space: nowrap;
+}
+
+// Divider
+.divider {
+  height: 0px;
+  width: 100%;
+  border-top: 1px solid #EDEFF1;
+}
+
+// Bottom section
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+}
+
+// Total label
+.totalLabel {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #111820;
+}
+
+// Total price
+.totalPrice {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #111820;
+  white-space: nowrap;
+}
+
+// Price breakdown
+.priceBreakdown {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5714285714285714em;
+  color: #111820;
+  text-align: left;
+}

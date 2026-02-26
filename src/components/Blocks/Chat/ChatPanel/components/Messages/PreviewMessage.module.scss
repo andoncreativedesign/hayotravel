@@ -1,0 +1,91 @@
+.wrapper {
+  width: 100%;
+}
+
+.messageRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.userRow {
+  justify-content: flex-end;
+}
+
+.botRow {
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  color: #fff;
+  position: absolute;
+  top: 12px;
+  z-index: 1;
+  border: 1px solid var(--colorBorder);
+  &__logo {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 100%;
+  position: relative;
+}
+
+.bubble {
+  border-radius: 12px;
+  position: relative;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+.userBubble {
+  background: #ffffff;
+  color: var(--neutral-gray-12, #111820);
+  align-self: flex-end;
+}
+
+.botBubble {
+  background: #ffffff;
+  color: var(--neutral-gray-12, #111820);
+  align-self: flex-start;
+}
+
+.withPadding {
+  padding-bottom: 24px;
+}
+
+.actionBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.content:hover .actionBtn {
+  opacity: 1;
+}
+
+.userText {
+  margin-right: 48px;
+}
+
+.botText {
+  margin-left: 48px;
+}

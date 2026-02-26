@@ -1,0 +1,370 @@
+// Flight Details Component
+.flightDetails {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: calc(100% - 48px);
+  overflow-y: auto;
+
+  &.cancelled {
+    opacity: 0.6;
+    background: #f9f9f9;
+
+    .headerLabel,
+    .bookingText,
+    .sectionTitle {
+      color: #8c8c8c !important;
+    }
+
+    .copyButton {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 28px;
+
+    .headerLabel {
+      font-size: 14px;
+      line-height: 22px;
+      color: #485a6e;
+      font-weight: 400;
+    }
+
+    .closeButton {
+      border: none;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .bookingRef {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .bookingText {
+        font-size: 14px;
+        line-height: 22px;
+        color: #111820;
+        font-weight: 700;
+      }
+
+      .copyButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 4px;
+
+        &:hover {
+          background: #f6f7f8;
+        }
+      }
+    }
+
+    .divider {
+      height: 1px;
+      background: #edeff1;
+      width: 100%;
+    }
+
+    .cancellationSection {
+      display: flex;
+      justify-content: flex-end;
+      padding: 12px 0;
+      border-top: 1px solid #edeff1;
+      border-bottom: 1px solid #edeff1;
+    }
+
+    .sectionTitle {
+      font-size: 20px;
+      line-height: 28px;
+      color: #2f3639;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .passengerList {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    // Custom Ant Design List styles
+    .antListCustom {
+      :global(.ant-list-item) {
+        padding: 0 !important;
+        border: none !important;
+        margin-bottom: 12px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Passenger Cards
+.passengerCardExpanded,
+.passengerCardCollapsed {
+  background: #ffffff;
+  border: 1px solid #edeff1;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 12px 40px 1px rgba(0, 0, 0, 0.06);
+
+  .passengerCardTop {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.passengerCardCollapsed {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+// Common passenger info styles
+.passengerInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .passengerHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .passengerBadge {
+      background: #f6f7f8;
+      border: 1px solid #dadee3;
+      border-radius: 16px;
+      padding: 4px 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      span {
+        font-size: 12px;
+        line-height: 20px;
+        color: #111820;
+        font-weight: 400;
+      }
+    }
+
+    .passengerName {
+      font-size: 16px;
+      line-height: 24px;
+      color: #111820;
+      font-weight: 700;
+    }
+  }
+
+  .passengerDetails {
+    font-size: 12px;
+    line-height: 20px;
+    color: #485a6e;
+    font-weight: 400;
+  }
+}
+
+.expandButton {
+  background: #ffffff;
+  border: none;
+  border-radius: 20px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 4px;
+
+  &:hover {
+    background: #f6f7f8;
+  }
+}
+
+// Expanded passenger card specific styles
+.passengerCardExpanded {
+  .passengerActions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    .actionButton {
+      background: #111820;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 4px 16px;
+      height: 32px;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &.secondary {
+        background: #ffffff;
+        color: #111820;
+        border: 1px solid #dadee3;
+      }
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .flightInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .flightTitle {
+      font-size: 14px;
+      line-height: 22px;
+      color: #222f3f;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .flightRoute {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+
+      .timeColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 24px;
+
+        .timeInfo {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+
+          .time {
+            font-size: 14px;
+            line-height: 22px;
+            color: #111820;
+            font-weight: 700;
+          }
+
+          .date {
+            font-size: 14px;
+            line-height: 22px;
+            color: #485a6e;
+            font-weight: 700;
+          }
+        }
+
+        .duration {
+          font-size: 12px;
+          line-height: 20px;
+          color: #485a6e;
+          font-weight: 400;
+        }
+      }
+
+      .routeVisual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1px;
+        height: 109px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 4.5px;
+          left: -4px;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: #dadee3;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 4.5px;
+          left: -4px;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: #dadee3;
+        }
+
+        .dashedLine {
+          width: 1px;
+          height: 100px;
+          background: repeating-linear-gradient(to bottom, #dadee3 0px, #dadee3 2px, transparent 2px, transparent 4px);
+        }
+      }
+
+      .airportInfo {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 109px;
+
+        .airportDetails {
+          display: flex;
+          flex-direction: column;
+
+          .cityName {
+            font-size: 14px;
+            line-height: 22px;
+            color: #111820;
+            font-weight: 700;
+          }
+
+          .airportName {
+            font-size: 14px;
+            line-height: 22px;
+            color: #485a6e;
+            font-weight: 700;
+          }
+        }
+
+        .flightInfo {
+          font-size: 12px;
+          line-height: 20px;
+          color: #485a6e;
+          font-weight: 400;
+
+          .flightType {
+            display: block;
+            margin-bottom: 4px;
+          }
+
+          .airline {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

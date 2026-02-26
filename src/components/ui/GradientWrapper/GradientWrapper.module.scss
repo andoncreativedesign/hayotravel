@@ -1,0 +1,10 @@
+.wrapper {
+  background: linear-gradient(180deg, #de411c 0%, #79016e 100%);
+  border-radius: var(--borderRadiusXL);
+  padding: 4px;
+  box-sizing: border-box;
+  isolation: isolate;
+  /* Prevent sub-pixel rendering issues */
+  transform: translateZ(0);
+  will-change: transform;
+}

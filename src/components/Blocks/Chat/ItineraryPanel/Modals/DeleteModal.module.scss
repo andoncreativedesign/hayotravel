@@ -1,0 +1,121 @@
+// DeleteModal.module.scss
+.deleteModal {
+  // Custom modal overrides if needed
+  :global(.ant-modal-content) {
+    border-radius: 8px;
+    padding: 14px !important;
+  }
+  :global(.ant-modal-body) {
+    padding: 10px !important;
+  }
+}
+
+.modalContent {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #faad14; // Warning color from design system
+}
+
+.warningIcon {
+  font-size: 24px;
+}
+
+.textWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0; // Allows text to wrap properly
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  font-family: var(--font-nexa);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111820;
+  margin: 0;
+}
+
+.description {
+  font-family: var(--font-nexa);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #485a6e;
+  margin: 0;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding-top: 4px; // Small additional spacing from design
+}
+
+.cancelButton {
+  height: 32px !important;
+  padding: 4px 16px !important;
+  border: 1px solid #dadee3 !important;
+  border-radius: 6px !important; // Smaller radius for buttons as per design
+  font-family: var(--font-nexa) !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  color: #111820 !important;
+  background: white !important;
+
+  &:hover {
+    border-color: #111820 !important;
+    color: #111820 !important;
+    background: white !important;
+  }
+
+  &:focus {
+    border-color: #111820 !important;
+    color: #111820 !important;
+    background: white !important;
+  }
+}
+
+.confirmButton {
+  height: 32px !important;
+  padding: 4px 16px !important;
+  border: none !important;
+  border-radius: 6px !important; // Smaller radius for buttons as per design
+  font-family: var(--font-nexa) !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  color: white !important;
+  background: #111820 !important;
+
+  &:hover {
+    background: #2f3639 !important;
+  }
+
+  &:focus {
+    background: #111820 !important;
+  }
+
+  &:disabled {
+    background: #111820 !important;
+    opacity: 0.6;
+  }
+}

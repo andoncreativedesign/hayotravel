@@ -1,0 +1,50 @@
+.panel {
+  &__wrapper {
+    padding: var(--paddingXL);
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--paddingMD);
+    margin-bottom: var(--paddingMD);
+    &__title {
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      line-height: 22px !important;
+      color: var(--colorText) !important;
+      margin-top: 0 !important;
+      &__text {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        line-height: 22px !important;
+        color: var(--colorTextDescription) !important;
+      }
+      &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    &__controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__text {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        line-height: 22px !important;
+        color: var(--colorTextDescription) !important;
+      }
+      &__button {
+        padding: 0;
+        border: none;
+        background: none;
+        border-radius: 50% !important;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

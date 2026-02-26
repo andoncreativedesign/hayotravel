@@ -1,0 +1,33 @@
+.status {
+  padding: var(--sizeXXS) var(--sizeSM) !important;
+  border-radius: var(--borderRadiusXL);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  &__selected {
+    background-color: #fffbe6;
+    color: var(--colorPrimaryTextHover) !important;
+    border: 1px solid #ffe58f;
+  }
+  &__pending {
+    background-color: #f2f9ff;
+    color: #2443a9 !important;
+    border: 1px solid #4c83ee;
+  }
+  &__confirmed {
+    background-color: var(--colorSuccessBG);
+    color: var(--colorSuccessTextActive) !important;
+    border: 1px solid var(--colorSuccessBorder);
+  }
+  &__failed {
+    background-color: var(--colorErrorBG);
+    color: var(--colorPrimaryTextActive) !important;
+    border: 1px solid var(--colorErrorBorder);
+  }
+  &__cancelled {
+    background-color: var(--colorFillTertiary);
+    color: var(--colorText) !important;
+    border: 1px solid var(--colorBorder);
+  }
+}

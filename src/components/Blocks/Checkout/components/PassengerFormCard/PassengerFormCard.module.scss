@@ -1,0 +1,182 @@
+.passengerCard {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 12px 40px 1px rgba(0, 0, 0, 0.06);
+
+  :global(.ant-card-body) {
+    padding: 0 !important;
+  }
+  :global(.ant-card-bordered) {
+    border: none !important;
+    margin: 0 !important;
+  }
+}
+
+.collapse {
+  :global(.ant-collapse-item) {
+    border: none !important;
+
+    :global(.ant-collapse-header) {
+      padding: 24px !important;
+      border: none !important;
+
+      :global(.ant-collapse-expand-icon) {
+        padding-inline-end: 8px !important;
+      }
+    }
+
+    :global(.ant-collapse-content) {
+      border: none !important;
+
+      :global(.ant-collapse-content-box) {
+        padding: 0 24px 24px 24px !important;
+      }
+    }
+  }
+}
+
+.panel {
+  border: none !important;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.titleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .travelerTitle {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.5em;
+      color: var(--colorText);
+    }
+
+    .ageLabel {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5714285714285714em;
+      color: #222f3f;
+      margin-top: 2px;
+    }
+  }
+}
+
+.profileToggleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .profileToggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .avatarIcon {
+      width: 32px;
+      height: 32px;
+      background-color: #ffeee6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .lightningIcon {
+        font-size: 16px;
+        color: #ff5601;
+      }
+    }
+
+    .profileText {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5714285714285714em;
+      color: var(--colorText);
+    }
+  }
+
+  .switch {
+    background-color: #485a6e;
+
+    &.ant-switch-checked {
+      background-color: #1890ff;
+    }
+  }
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .sectionTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .sectionTitleText {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      color: var(--colorText);
+    }
+
+    .sectionDescription {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.6666666666666667em;
+      color: var(--colorText);
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .header {
+    gap: 12px;
+  }
+
+  .titleSection {
+    .left {
+      .travelerTitle {
+        font-size: 14px;
+      }
+
+      .ageLabel {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .profileToggleSection {
+    .profileToggle {
+      .profileText {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .formContent {
+    gap: 16px;
+  }
+}

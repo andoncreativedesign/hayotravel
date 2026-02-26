@@ -1,0 +1,133 @@
+.unifiedProgressBar {
+  margin: 0 auto;
+  padding: 16px 0;
+  position: sticky;
+}
+
+.customSteps {
+  // Override AntDesign Steps to use our design tokens
+  :global(.ant-steps-item) {
+    flex: 1;
+
+    :global(.ant-steps-item-container) {
+      display: flex;
+      align-items: center;
+    }
+
+    // Step icon styling using CSS variables
+    :global(.ant-steps-item-icon) {
+      width: var(--steps-icon-size) !important;
+      height: var(--steps-icon-size) !important;
+      line-height: var(--steps-icon-size) !important;
+      border-radius: 50% !important;
+      font-size: var(--steps-font-size) !important;
+      font-weight: 400 !important;
+      margin-inline-end: 8px !important;
+
+      // Default/waiting state
+      border: 1px solid var(--steps-wait-bg) !important;
+      background-color: var(--steps-wait-bg) !important;
+      color: var(--steps-wait-color) !important;
+    }
+
+    // Current/process state icon
+    &:global(.ant-steps-item-process) {
+      :global(.ant-steps-item-icon) {
+        background-color: var(--steps-process-bg) !important;
+        border-color: var(--steps-process-bg) !important;
+        color: var(--steps-process-color) !important;
+      }
+    }
+
+    // Finished state icon
+    &:global(.ant-steps-item-finish) {
+      :global(.ant-steps-item-icon) {
+        background-color: var(--steps-finish-bg) !important;
+        border-color: var(--steps-finish-bg) !important;
+
+        :global(.anticon) {
+          color: var(--steps-finish-color) !important;
+        }
+      }
+
+      :global(.ant-steps-item-title) {
+        &::after {
+          background-color: var(--steps-tail-active-color) !important;
+        }
+      }
+    }
+
+    // Waiting state icon
+    &:global(.ant-steps-item-wait) {
+      :global(.ant-steps-item-icon) {
+        background-color: var(--steps-wait-bg) !important;
+        border-color: var(--steps-wait-bg) !important;
+        color: var(--steps-wait-color) !important;
+      }
+    }
+
+    // Step title styling
+    :global(.ant-steps-item-title) {
+      font-size: var(--steps-title-font-size) !important;
+      font-weight: 400 !important;
+      line-height: 1.5 !important;
+      color: var(--steps-title-color) !important;
+      &::after {
+        height: 1px !important;
+        top: 50% !important;
+        transform: translateY(1px) !important;
+        background-color: var(--steps-tail-color) !important;
+      }
+    }
+
+    // Wait state title color
+    &:global(.ant-steps-item-wait) {
+      :global(.ant-steps-item-title) {
+        color: var(--steps-title-wait-color) !important;
+      }
+    }
+
+    // Tail (connector line) styling
+    :global(.ant-steps-item-tail) {
+      top: 16px !important;
+
+      &::after {
+        background-color: var(--steps-tail-color) !important;
+      }
+    }
+
+    // Active tail styling for completed steps
+    &:global(.ant-steps-item-finish) {
+      :global(.ant-steps-item-tail) {
+        &::after {
+          background-color: var(--steps-tail-active-color) !important;
+        }
+      }
+    }
+
+    // Remove margin from last item
+    &:last-child {
+      flex: none;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .unifiedProgressBar {
+    margin-bottom: 24px;
+  }
+
+  .customSteps {
+    :global(.ant-steps-item-icon) {
+      width: var(--steps-icon-size-sm) !important;
+      height: var(--steps-icon-size-sm) !important;
+      line-height: var(--steps-icon-size-sm) !important;
+      font-size: 12px !important;
+    }
+
+    :global(.ant-steps-item-title) {
+      font-size: var(--steps-title-font-size-sm) !important;
+    }
+  }
+}

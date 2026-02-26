@@ -1,0 +1,44 @@
+.work-zone {
+  &__container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 48px); /* Set explicit height */
+    max-width: calc(100vw - 48px);
+    margin: var(--sizeLG);
+    border-radius: 16px;
+    overflow: hidden;
+
+    &--checkout {
+      height: auto;
+      min-height: calc(100vh - 48px);
+      overflow: visible;
+    }
+    
+    @media (max-width: 768px) {
+      height: calc(100vh - 32px);
+      max-width: calc(100vw - 32px);
+      margin: 16px;
+      
+      &--checkout {
+        min-height: calc(100vh - 32px);
+      }
+    }
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &--checkout {
+      height: inherit;
+      width: inherit;
+      min-height: calc(100vh - 48px);
+    }
+    
+    @media (max-width: 768px) {
+      &--checkout {
+        min-height: calc(100vh - 32px);
+      }
+    }
+  }
+}

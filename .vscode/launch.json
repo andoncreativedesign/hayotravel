@@ -1,0 +1,66 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Playwright Test",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/playwright",
+      "args": [
+        "test",
+        "--debug",
+        "--project=chromium",
+        "--headed",
+        "${relativeFile}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "PWDEBUG": "1",
+        "NEXT_PUBLIC_API_URL": "http://localhost:8000/",
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Debug Specific Playwright Test",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/playwright",
+      "args": [
+        "test",
+        "--debug",
+        "--project=chromium",
+        "--headed",
+        "--grep",
+        "should preserve conversation_id between two messages"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "PWDEBUG": "1",
+        "NEXT_PUBLIC_API_URL": "http://localhost:8000/",
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Debug All Chat Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/playwright",
+      "args": [
+        "test",
+        "--debug",
+        "--project=chromium",
+        "--headed",
+        "tests/chat-conversation-flow.spec.ts"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "PWDEBUG": "1",
+        "NEXT_PUBLIC_API_URL": "http://localhost:8000/",
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}

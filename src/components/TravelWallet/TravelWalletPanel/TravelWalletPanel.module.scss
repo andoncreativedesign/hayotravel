@@ -1,0 +1,149 @@
+.travelWalletPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-height: 0; /* Allow flex children to shrink */
+}
+
+.filterSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.filterTabs {
+  border-radius: 8px !important;
+  padding: 4px !important;
+  :global(.ant-segmented-item-label) {
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 22px !important;
+    padding: 4px var(--paddingSM) !important;
+  }
+}
+
+.tripsSection {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 8px 32px 0; /* Right padding for scrollbar, increased bottom padding for content visibility */
+
+  /* Custom scrollbar styling */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--neutral-gray-5);
+    border-radius: 3px;
+
+    &:hover {
+      background: var(--neutral-gray-6);
+    }
+  }
+
+  /* Firefox scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-gray-5) transparent;
+
+  @media (max-width: 768px) {
+    padding: 0 4px 24px 0; /* Increased mobile bottom padding */
+    /* Hide scrollbar on mobile for cleaner look */
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 20px;
+  text-align: center;
+  min-height: 200px; /* Reduced to prevent overflow issues */
+
+  p {
+    font-family: var(--font-nexa), sans-serif;
+    font-size: 16px;
+    color: var(--colorTextDescription);
+    margin: 0;
+  }
+
+  :global(.ant-spin-dot) {
+    font-size: 24px;
+  }
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 20px;
+  text-align: center;
+  min-height: 200px; /* Reduced to prevent overflow issues */
+
+  .emptyIcon {
+    font-size: 48px;
+    margin-bottom: 8px;
+    opacity: 0.6;
+  }
+
+  h3 {
+    font-family: var(--font-nexa), sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: var(--colorText) !important;
+    margin: 0 !important;
+  }
+
+  p {
+    font-family: var(--font-nexa), sans-serif;
+    font-size: 16px;
+    color: var(--colorTextDescription);
+    margin: 0;
+    max-width: 400px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .emptyIcon {
+      font-size: 40px;
+    }
+
+    h3 {
+      font-size: 18px !important;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.tripsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 48px; /* Increased bottom padding to ensure visibility */
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-bottom: 32px; /* Increased mobile bottom padding */
+  }
+}

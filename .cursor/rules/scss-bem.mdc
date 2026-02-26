@@ -1,0 +1,5 @@
+---
+description: "always use BEM with SCSS, and use '&' scss feature for it!"
+globs:
+alwaysApply: true
+---

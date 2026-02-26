@@ -1,0 +1,337 @@
+:root {
+  /* colors */
+  /* Primary */
+  --primary-0: #fffaf7;
+  --primary-1: #ffeee6;
+  --primary-2: #ffd6c2;
+  --primary-3: #ffb692;
+  --primary-4: #ff955f;
+  --primary-5: #ff742f;
+  --primary-6: #ff5601;
+  --primary-7: #d94901;
+
+  /* Neutral */
+  --neutral-gray-1: #ffffff;
+  /* --neutral-gray-2: #F6F7F8; */
+  --neutral-gray-3: #f6f7f8;
+  --neutral-gray-4: #edeff1;
+  --neutral-gray-5: #dadee3;
+  --neutral-gray-6: #c0c6ce;
+  --neutral-gray-7: #919dab;
+  --neutral-gray-8: #485a6e;
+  --neutral-gray-9: #2a3b4f;
+  --neutral-gray-10: #222f3f;
+  --neutral-gray-11: #19232f;
+  --neutral-gray-12: #111820;
+  --neutral-gray-13: #080c10;
+
+  /* Danger */
+  --red-1: #fff1f0;
+  --red-2: #ffccc7;
+  --red-3: #ffa39e;
+  --red-4: #ff7875;
+  --red-5: #ff4d4f;
+  --red-6: #f5222d;
+  --red-7: #cf1322;
+  --red-8: #a8071a;
+  --red-9: #820014;
+  --red-10: #5c0011;
+
+  /* Success */
+  --green-1: #f6ffed;
+  --green-2: #d9f7be;
+  --green-3: #b7eb8f;
+  --green-4: #95de64;
+  --green-5: #73d13d;
+  --green-6: #52c41a;
+  --green-7: #389e0d;
+  --green-8: #237804;
+  --green-9: #135200;
+  --green-10: #092b00;
+
+  /* Opacity */
+  --opacity-100: rgba(0, 0, 0, 1);
+  --opacity-88: rgba(0, 0, 0, 0.88);
+  --opacity-65: rgba(0, 0, 0, 0.65);
+  --opacity-45: rgba(0, 0, 0, 0.45);
+  --opacity-25: rgba(0, 0, 0, 0.25);
+  --opacity-15: rgba(0, 0, 0, 0.15);
+  --opacity-6: rgba(0, 0, 0, 0.06);
+  --opacity-4: rgba(0, 0, 0, 0.04);
+  --opacity-2: rgba(0, 0, 0, 0.02);
+
+  /* Color Fill */
+  --colorFill: var(--opacity-15);
+  --colorFillSecondary: var(--opacity-6);
+  --colorFillTertiary: var(--opacity-4);
+  --colorFillQuaternary: var(--opacity-2);
+  /* colors */
+
+  /* Primary */
+  --colorPrimaryBG: var(--primary-1);
+  --colorPrimaryBGHover: var(--primary-2);
+  --colorPrimaryBorder: var(--primary-3);
+  --colorPrimaryBorderHover: var(--primary-4);
+  --colorPrimaryHover: var(--primary-5);
+  --colorPrimary: var(--primary-6);
+  --colorPrimaryActive: var(--primary-7);
+  --colorPrimaryTextHover: var(--primary-5);
+  --colorPrimaryText: var(--primary-6);
+  --colorPrimaryTextActive: var(--primary-7);
+  --colorLinkActive: var(--primary-7);
+  --colorLinkHover: var(--colorPrimaryTextHover);
+  /* Primary */
+
+  /* Netural Background */
+  --colorBgContainer: var(--neutral-gray-1);
+  --colorBgElevated: var(--neutral-gray-3);
+  --colorBgLayout: var(--neutral-gray-4);
+  --colorBgSpotlight: var(--neutral-gray-12);
+  --colorBgContainerDisabled: var(--neutral-gray-3);
+  --controlItemBgActive: var(--primary-1);
+  --controlItemBgActiveHover: var(--primary-2);
+  --controlItemBgActiveDisabled: var(--primary-0);
+  --colorBgTextActive: var(--colorFill);
+  --colorBgTextHover: var(--colorFillSecondary);
+  /* Netural Background */
+
+  /* Text */
+  --colorText: var(--neutral-gray-12);
+  --colorTextLabel: var(--neutral-gray-10);
+  --colorTextDescription: var(--neutral-gray-8);
+  --colorTextPlaceholder: var(--neutral-gray-8);
+  --colorTextDisabled: var(--neutral-gray-7);
+  --colorIcon: var(--neutral-gray-12);
+  --colorIconSecondary: var(--neutral-gray-8);
+  --colorIconHover: var(--neutral-gray-8);
+  --colorTextSolid: #fff;
+  /* Text */
+
+  /* Border */
+  --colorBorder: var(--neutral-gray-5);
+  --colorBorderPrimary: var(--primary-3);
+  --colorBorderSecondary: var(--neutral-gray-4);
+  --colorSplit: var(--opacity-6);
+  /* Border */
+
+  /* Success */
+  --colorSuccessBG: var(--green-1);
+  --colorSuccessBGHover: var(--green-2);
+  --colorSuccessBorder: var(--green-3);
+  --colorSuccessBorderHover: var(--green-4);
+  --colorSuccessHover: var(--green-5);
+  --colorSuccess: var(--green-6);
+  --colorSuccessActive: var(--green-7);
+  --colorSuccessTextHover: var(--green-5);
+  --colorSuccessText: var(--green-6);
+  --colorSuccessTextActive: var(--green-7);
+  /* Success */
+
+  /* Error */
+  --colorErrorBG: var(--red-1);
+  --colorErrorBGHover: var(--red-2);
+  --colorErrorBorder: var(--red-3);
+  --colorErrorBorderHover: var(--red-4);
+  --colorErrorHover: var(--red-5);
+  --colorError: var(--red-6);
+  --colorErrorActive: var(--red-7);
+  --colorErrorTextHover: var(--red-5);
+  --colorErrorText: var(--red-6);
+  --ColorErrorTextActive: var(--red-7);
+  /* Error */
+
+  /* Info */
+  --colorInfoBG: var(--primary-1);
+  --colorInfoBGHover: var(--primary-2);
+  --colorInfoBorder: var(--primary-3);
+  --colorInfoBorderHover: var(--primary-4);
+  --colorInfoHover: var(--primary-5);
+  --colorInfo: var(--primary-6);
+  --colorInfoActive: var(--primary-7);
+  --colorInfoTextHover: var(--primary-5);
+  --colorInfoText: var(--primary-6);
+  --ColorInfoTextActive: var(--primary-7);
+  /* Info */
+
+  /* Size */
+  --sizeXXL: 48px;
+  --sizeXL: 32px;
+  --sizeLG: 24px;
+  --sizeMD: 20px;
+  --size: 16px;
+  --sizeSM: 12px;
+  --sizeXS: 8px;
+  --sizeXXS: 4px;
+  /* Size */
+
+  /* Padding */
+  --paddingXXL: var(--sizeXXL);
+  --paddingXL: var(--sizeXL);
+  --paddingLG: var(--sizeLG);
+  --paddingMD: var(--sizeMD);
+  --padding: var(--size);
+  --paddingSM: var(--sizeSM);
+  --paddingXS: var(--sizeXS);
+  --paddingXXS: var(--sizeXXS);
+  /* Padding */
+
+  /* Height */
+  --controlHeightLG: 40px;
+  --controlHeight: 32px;
+  --controlHeightSM: 24px;
+  --controHeightXS: 16px;
+  /* Height */
+
+  /* Screen */
+  --screenXXL: 1600px;
+  --screenXXLMin: 1600px;
+  --screenXL: 1200px;
+  --screenXLMax: 1599px;
+  --screenXLMin: 1200px;
+  --screenLG: 992px;
+  --screenLGMax: 1199px;
+  --screenLGMin: 992px;
+  --screenMD: 768px;
+  --screenMDMax: 991px;
+  --screenMDMin: 768px;
+  --screenSM: 576px;
+  --screenSMMax: 767px;
+  --screenSMMin: 576px;
+  --screenXS: 480px;
+  --screenXSMax: 575px;
+  --screenXSMin: 480px;
+  /* Screen */
+
+  /* Border Radius */
+  --borderRadiusXL: 16px;
+  --borderRadiusLG: 8px;
+  --borderRadius: 6px;
+  --borderRadiusSM: 4px;
+  --borderRadiusXS: 2px;
+  /* Border Radius */
+
+  --font-nexa: "NexaText", sans-serif;
+
+  /* Gradient Colors */
+  --gradient-primary-start: #de411c;
+  --gradient-primary-end: #79016e;
+  --gradient-primary: linear-gradient(180deg, var(--gradient-primary-start) 0%, var(--gradient-primary-end) 100%);
+
+  /* Steps Component Variables */
+  --steps-icon-size: 32px;
+  --steps-icon-size-sm: 28px;
+  --steps-font-size: 14px;
+  --steps-title-font-size: 16px;
+  --steps-title-font-size-sm: 14px;
+
+  /* Steps Colors */
+  --steps-process-bg: var(--primary-6);
+  --steps-process-color: #ffffff;
+  --steps-finish-bg: var(--primary-1);
+  --steps-finish-color: var(--primary-6);
+  --steps-wait-bg: var(--neutral-gray-4);
+  --steps-wait-color: var(--neutral-gray-8);
+  --steps-title-color: var(--neutral-gray-12);
+  --steps-title-wait-color: var(--neutral-gray-8);
+  --steps-tail-color: var(--opacity-6);
+  --steps-tail-active-color: var(--primary-6);
+}
+
+html,
+body {
+  font-family: var(--font-nexa);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  /* Smooth scrolling for better UX */
+  scroll-behavior: smooth;
+  /* Prevent overscroll bounce on iOS */
+  overscroll-behavior: none;
+}
+
+#__next {
+  height: 100%;
+}
+
+/* Mobile touch scrolling optimization */
+@media (max-width: 768px) {
+  * {
+    /* Enable momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent zoom on input focus on iOS */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Ant Design Select Dropdown Styling */
+.ant-select-dropdown {
+  .ant-select-item {
+    &.ant-select-item-option-selected {
+      background-color: var(--neutral-gray-3) !important;
+      color: var(--neutral-gray-10) !important;
+      font-weight: 500 !important;
+    }
+
+    &.ant-select-item-option-active {
+      background-color: var(--primary-1) !important;
+      color: var(--neutral-gray-12) !important;
+    }
+
+    &:hover {
+      background-color: var(--primary-1) !important;
+      color: var(--neutral-gray-12) !important;
+      cursor: pointer !important;
+    }
+  }
+}
+
+/* Ant Design Modal Scrolling */
+.ant-modal {
+  .ant-modal-content {
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ant-modal-body {
+    overflow-y: auto;
+    max-height: calc(90vh - 108px); // Subtract header and footer height
+
+    /* Custom scrollbar styling for modals */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--neutral-gray-5);
+      border-radius: 3px;
+
+      &:hover {
+        background: var(--neutral-gray-6);
+      }
+    }
+
+    /* Firefox scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--neutral-gray-5) transparent;
+  }
+
+  .ant-modal-header {
+    flex-shrink: 0;
+  }
+
+  .ant-modal-footer {
+    flex-shrink: 0;
+  }
+}

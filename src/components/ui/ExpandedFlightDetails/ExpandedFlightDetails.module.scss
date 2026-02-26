@@ -1,0 +1,172 @@
+// Expanded details section
+.expandedDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.expandedSubtitle {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+  width: 100%;
+}
+
+.detailsLabel {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+  width: 100%;
+}
+
+.detailsContent {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 16px;
+}
+
+.detailsInfo {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}
+
+// Flight direction details (for future use)
+.flightDirection {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  align-self: stretch;
+  gap: 12px;
+}
+
+.timeSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.timeFrame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.time {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+  text-align: right;
+}
+
+.timeDate {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextDescription) !important;
+  margin: 0 !important;
+  text-align: right;
+}
+
+.duration {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 1.67em !important;
+  color: var(--colorTextDescription) !important;
+  margin: 0 !important;
+  text-align: right;
+}
+
+// Timeline divider styles
+.timelineDivider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 9px;
+  height: 100%;
+  min-height: 120px;
+  margin: auto 0;
+  position: relative;
+}
+
+.timelineCircle {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--colorBorder);
+  flex-shrink: 0;
+}
+
+.timelineLine {
+  flex: 1;
+  width: 1px;
+  background: var(--neutral-gray-5) !important;
+  background-color: var(--neutral-gray-5) !important;
+  margin: 0 4px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--colorBorder);
+  align-self: stretch;
+}
+
+.airportSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  gap: 12px;
+}
+
+.airportInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.flightInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.cityName {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+  width: 184px;
+}
+
+.airportName {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextDescription) !important;
+  margin: 0 !important;
+}
+
+.flightType {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 1.67em !important;
+  color: var(--colorTextDescription) !important;
+  margin: 0 !important;
+}

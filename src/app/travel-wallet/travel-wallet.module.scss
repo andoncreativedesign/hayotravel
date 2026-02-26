@@ -1,0 +1,95 @@
+.travelWalletPage {
+  background: var(--colorBgContainer);
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-height: 0; /* Allow flex children to shrink */
+  
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.header {
+  margin-bottom: 24px; /* Reduced from var(--paddingXL) which is 32px */
+  flex-shrink: 0;
+  
+  &__title {
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+    color: var(--colorText);
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.backButton {
+  align-self: flex-start;
+  color: var(--colorText) !important;
+  padding: 8px 12px !important;
+  height: auto !important;
+
+  &:hover {
+    background-color: var(--colorBgSpotlight) !important;
+  }
+
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pageSubtitle {
+  font-family: var(--font-nexa), sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: var(--colorTextDescription) !important;
+  margin: 0 !important;
+
+  @media (max-width: 768px) {
+    font-size: 14px !important;
+  }
+}
+
+.content {
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0; /* Allow flex children to shrink */
+}
+
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 20px;
+  text-align: center;
+  min-height: 200px;
+
+  p {
+    font-family: var(--font-nexa), sans-serif;
+    font-size: 16px;
+    color: var(--colorTextDescription);
+    margin: 0;
+  }
+
+  .ant-btn {
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 24px;
+    font-weight: 500;
+  }
+}

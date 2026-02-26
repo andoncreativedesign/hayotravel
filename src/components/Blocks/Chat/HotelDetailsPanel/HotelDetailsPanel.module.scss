@@ -1,0 +1,452 @@
+.container {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--paddingLG) var(--paddingLG) var(--paddingMD) var(--paddingLG);
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  &-text {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    color: var(--colorTextDescription) !important;
+    margin: 0 !important;
+  }
+  &-back {
+    border-radius: 100px !important;
+    padding: 8px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.photos {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--paddingSM);
+}
+
+.leftPhoto {
+  position: relative;
+  flex: 1;
+  height: 348px;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 60%;
+}
+
+.mainImage {
+  border-radius: 8px;
+}
+
+.rightPhotos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 40%;
+  height: auto;
+}
+
+.smallPhoto {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.smallImage {
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(46, 46, 46, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.overlayText {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  text-align: center;
+}
+
+// Hotel Content Section
+.content {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 4px;
+  width: 100%;
+  margin-bottom: var(--padding);
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.hotelName {
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  line-height: 1.4em !important;
+  color: #2f3639 !important;
+  margin: 0 !important;
+  flex: 1;
+  max-width: 345px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.starRating {
+  :global(.ant-rate-star) {
+    color: #485a6e !important;
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  gap: 16px;
+  width: 100%;
+}
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+}
+
+.review {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.reviewStar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+
+.reviewText {
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  line-height: 1.67em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--paddingXXS);
+  padding: 1px var(--sizeXS) 1px 0;
+  border-radius: var(--borderRadiusSM);
+  width: fit-content;
+
+  &-icon {
+    width: var(--sizeSM) !important;
+    height: var(--sizeSM) !important;
+    color: #1d4ed8 !important;
+    flex-shrink: 0 !important;
+  }
+
+  &-link {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &-text {
+    font-family: var(--font-nexa);
+    font-size: var(--sizeSM);
+    font-weight: 400;
+    line-height: 20px;
+    color: #1d4ed8 !important;
+    margin: 0;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+.locationTag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 8px 1px 0px;
+  border-radius: 4px;
+}
+
+.buildingsIcon {
+  width: 12px;
+  height: 12px;
+  color: #111820;
+}
+
+.locationText {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 1.67em !important;
+  color: #111820 !important;
+  margin: 0 !important;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #dadee3;
+}
+
+.distanceText {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 1.67em !important;
+  color: #485a6e !important;
+  margin: 0 !important;
+}
+
+// Scrollable content area
+.scrollableContent {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: var(--paddingLG);
+}
+
+// Content wrapper with padding
+.contentWrapper {
+  padding: 0 var(--paddingLG);
+}
+
+// Tabs Navigation Section
+.tabsHeader {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  gap: 24px;
+  width: 100%;
+  border-bottom: 1px solid #edeff1;
+  margin-bottom: var(--padding);
+  background: white;
+  position: sticky;
+  top: 0; /* Height of the header */
+  z-index: 99;
+  padding: 0 var(--paddingLG);
+}
+
+.tabItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0px;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: #111820 !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:hover {
+    color: #111820 !important;
+    text-decoration: none !important;
+  }
+
+  &:focus {
+    text-decoration: none !important;
+    outline: none;
+  }
+}
+
+.tabItemActive {
+  font-weight: 700 !important;
+  color: #111820 !important;
+  border-bottom-color: #111820;
+
+  &:hover {
+    color: #111820 !important;
+  }
+}
+
+.divider {
+  margin: var(--padding) 0 !important;
+  background: BLACK !important;
+}
+
+// About Section
+.about {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: var(--padding);
+}
+
+.aboutItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  align-self: stretch;
+  gap: 8px;
+  width: 100%;
+}
+
+.aboutLabel {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5714285714285714em !important;
+  color: #485a6e !important;
+  margin: 0 !important;
+  flex: 1;
+}
+
+.aboutValue {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5714285714285714em !important;
+  color: #222f3f !important;
+  margin: 0 !important;
+  flex: 1;
+}
+
+.aboutValueGreen {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5714285714285714em !important;
+  color: #389e0d !important;
+  margin: 0 !important;
+  flex: 1;
+}
+
+.aboutDescription {
+  width: 100%;
+}
+
+.aboutText {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5714285714285714em !important;
+  color: #485a6e !important;
+  margin: 0 !important;
+  width: 517px;
+  height: 88px;
+}
+
+// Location Section
+.locationSection {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: var(--padding);
+}
+
+.sectionTitle {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 1.5em !important;
+  color: #111820 !important;
+  margin: 0 !important;
+}
+
+.locationItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.mapPinIcon {
+  width: 16px !important;
+  height: 16px !important;
+  color: #111820 !important;
+  flex-shrink: 0;
+}
+
+.locationAddress {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5714285714285714em !important;
+  color: #111820 !important;
+  margin: 0 !important;
+}

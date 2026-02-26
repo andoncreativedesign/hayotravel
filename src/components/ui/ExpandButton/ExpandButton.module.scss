@@ -1,0 +1,42 @@
+.expandButton {
+  background: #ffffff;
+  border: none !important;
+  box-sizing: border-box;
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 4px !important;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+  transform-origin: center;
+
+  &:hover {
+    background: #f6f7f8;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background: #ffffff;
+    }
+  }
+
+  svg {
+    transition: transform 0.2s ease-in-out;
+    transform: rotate(-90deg);
+  }
+
+  // Expanded state - rotates the arrow
+  &--expanded {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}

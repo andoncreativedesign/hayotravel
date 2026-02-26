@@ -1,0 +1,332 @@
+// New design - Basket item card
+.basketItem {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: var(--padding);
+  padding: var(--padding);
+  background: var(--colorBgContainer);
+  border: 1px solid var(--colorBorder);
+  border-radius: var(--borderRadiusLG);
+  margin-bottom: var(--padding);
+
+  &.cancelled {
+    opacity: 0.6;
+    background: #f9f9f9;
+    border-color: #d9d9d9;
+
+    .label,
+    .text,
+    .price {
+      color: #8c8c8c !important;
+    }
+
+    .icon {
+      opacity: 0.5;
+    }
+  }
+}
+
+// Top section with title and actions
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--colorText);
+}
+
+.label {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 1.5em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.badge {
+  border-radius: 16px;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  line-height: 1.67em !important;
+
+  :global(.ant-badge-count) {
+    background: #fffbe6;
+    color: #ff742f;
+    border: 1px solid #ffe58f;
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-family: "Nexa Bold", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.67em;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+}
+
+.iconWithBg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  background: var(--colorBgContainer);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: var(--colorBgTextHover);
+  }
+}
+
+.actionIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--colorText);
+}
+
+// Flight sections
+.outbound,
+.inbound {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.segmentHeader {
+  display: flex;
+  gap: 74px;
+  width: 100%;
+  min-height: 22px;
+}
+
+.segmentLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 298px;
+}
+
+.segmentLabel {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.segmentDate {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.airline {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}
+
+.flightDetails {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}
+
+// Class and extras section
+.classAndExtras {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  align-self: stretch;
+  gap: 16px;
+}
+
+.classInfo {
+  display: flex;
+  flex-direction: column;
+  background: var(--colorBgContainer);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.classLabel {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}
+
+.className {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.extras {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.extraItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.extraIcon {
+  width: 12px;
+  height: 12px;
+  color: #389e0d;
+
+  &.warning {
+    color: #d48806;
+  }
+}
+
+.extraText {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 1.67em !important;
+  color: #389e0d !important;
+  margin: 0 !important;
+
+  &.warning {
+    color: #d48806 !important;
+  }
+}
+
+// Price section
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.taxesLabel {
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  margin: 0 !important;
+}
+
+.priceAmount {
+  display: flex;
+  align-items: center;
+}
+
+.priceAmountAll {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.amount {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.amountAll {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+}
+
+.per {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.57em !important;
+  color: var(--colorTextSecondary) !important;
+  margin: 0 !important;
+}
+
+// Legacy styles (keeping for backward compatibility if needed)
+.item__container {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--colorBorder);
+}
+
+.item__marker {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--colorPrimary);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.item__card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  background: var(--colorBgContainer);
+  border: 1px solid var(--colorBorder);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+// Divider
+.divider {
+  height: 1px;
+  background: var(--colorBorder);
+  align-self: stretch;
+}

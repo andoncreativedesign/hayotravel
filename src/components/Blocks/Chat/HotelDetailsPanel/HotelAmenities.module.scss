@@ -1,0 +1,54 @@
+// Amenities Section
+.amenities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: var(--padding);
+}
+
+.amenitiesTitle {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 1.5em !important;
+  color: #485a6e !important;
+  margin: 0 !important;
+}
+
+.amenitiesGrid {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 84px;
+  width: 100%;
+  height: 70px;
+}
+
+.amenitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.amenityItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.amenityIcon {
+  width: 16px;
+  height: 16px;
+  color: #485a6e;
+  flex-shrink: 0;
+}
+
+.amenityText {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  color: #485a6e !important;
+  margin: 0 !important;
+}

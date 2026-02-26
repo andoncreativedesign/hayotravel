@@ -1,0 +1,121 @@
+.tripDetailPage {
+  background: var(--colorBgContainer);
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--colorBorder);
+
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+    gap: 12px;
+  }
+}
+
+.backButton {
+  align-self: flex-start;
+  padding: 8px 12px !important;
+
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pageTitle {
+  font-family: var(--font-nexa), sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  color: var(--colorText) !important;
+  margin: 0 !important;
+
+  @media (max-width: 768px) {
+    font-size: 28px !important;
+  }
+}
+
+.pageSubtitle {
+  font-family: var(--font-nexa), sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: var(--colorTextDescription) !important;
+  margin: 0 !important;
+
+  @media (max-width: 768px) {
+    font-size: 14px !important;
+  }
+}
+
+.content {
+  width: 100%;
+}
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 20px;
+  text-align: center;
+  min-height: 300px;
+
+  p {
+    font-family: var(--font-nexa), sans-serif;
+    font-size: 16px;
+    color: var(--colorTextDescription);
+    margin: 0;
+  }
+
+  :global(.ant-spin-dot) {
+    font-size: 24px;
+  }
+}
+
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 20px;
+  text-align: center;
+  min-height: 300px;
+
+  h2 {
+    font-family: var(--font-nexa), sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    color: var(--colorText) !important;
+    margin: 0 !important;
+  }
+
+  p {
+    font-family: var(--font-nexa), sans-serif;
+    font-size: 16px;
+    color: var(--colorTextDescription);
+    margin: 0;
+    max-width: 400px;
+  }
+
+  .ant-btn {
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 24px;
+    font-weight: 500;
+  }
+}

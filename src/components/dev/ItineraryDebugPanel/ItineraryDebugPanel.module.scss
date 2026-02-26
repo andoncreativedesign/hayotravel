@@ -1,0 +1,405 @@
+.debugPanel {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 400px;
+  max-height: 70vh;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 12px;
+  z-index: 9999;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  &.collapsed {
+    width: auto;
+    max-width: 300px;
+    max-height: none;
+    overflow: visible;
+  }
+
+  &.dragging {
+    user-select: none;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    z-index: 10000;
+    cursor: grabbing !important;
+
+    * {
+      cursor: grabbing !important;
+    }
+
+    .header {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      margin: -4px;
+      padding: 4px 4px 12px 4px;
+    }
+  }
+}
+
+.collapsedContent {
+  margin-top: 8px;
+}
+
+.quickInfo {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  flex-wrap: wrap;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+
+    code {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: #60a5fa;
+    }
+
+    em {
+      color: #d1d5db;
+      font-style: italic;
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  &.dragHandle {
+    cursor: move;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+      margin: -4px;
+      padding: 4px 4px 12px 4px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dragIndicator {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  line-height: 1;
+  cursor: grab;
+  user-select: none;
+  transition: color 0.2s ease;
+  
+  .header:hover & {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.headerControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toggleButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  user-select: none;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  // Prevent drag when clicking the button
+  &:active {
+    pointer-events: all;
+  }
+}
+
+.decision {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &.update_existing {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid #22c55e;
+  }
+
+  &.create_new {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid #ef4444;
+  }
+
+  .collapsed & {
+    font-size: 9px;
+    padding: 3px 6px;
+  }
+}
+
+.section {
+  margin-bottom: 16px;
+
+  h4 {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    color: #fbbf24;
+    border-bottom: 1px solid rgba(251, 191, 36, 0.3);
+    padding-bottom: 4px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  .section {
+    margin-bottom: 0;
+  }
+}
+
+.debugInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    code {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 4px;
+      border-radius: 3px;
+      color: #60a5fa;
+      font-size: 11px;
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.decisionInfo {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    code {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #60a5fa;
+    }
+
+    em {
+      color: #d1d5db;
+      font-style: italic;
+      font-size: 11px;
+    }
+  }
+}
+
+.storageItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 4px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+
+  .storageKey {
+    font-size: 10px;
+    color: #fbbf24;
+    font-weight: bold;
+  }
+
+  .storageValue {
+    code {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 4px;
+      border-radius: 2px;
+      color: #60a5fa;
+      font-size: 10px;
+    }
+  }
+}
+
+.jsonOutput {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #d1d5db;
+}
+
+.details {
+  cursor: pointer;
+
+  :global(summary) {
+    color: #60a5fa;
+    font-size: 11px;
+    margin-bottom: 8px;
+    
+    &:hover {
+      color: #93c5fd;
+    }
+  }
+
+  &[open] :global(summary) {
+    margin-bottom: 8px;
+  }
+}
+
+// Payment status styles
+.paid {
+  background: rgba(34, 197, 94, 0.2) !important;
+  color: #22c55e !important;
+  border: 1px solid rgba(34, 197, 94, 0.4) !important;
+}
+
+.unpaid {
+  background: rgba(239, 68, 68, 0.2) !important;
+  color: #ef4444 !important;
+  border: 1px solid rgba(239, 68, 68, 0.4) !important;
+}
+
+// Debug button styles
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.debugButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  user-select: none;
+  min-width: 80px;
+
+  &:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &.success {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.4);
+    color: #22c55e;
+
+    &:hover:not(:disabled) {
+      background: rgba(34, 197, 94, 0.3);
+      border-color: rgba(34, 197, 94, 0.6);
+    }
+  }
+
+  &.warning {
+    background: rgba(251, 191, 36, 0.2);
+    border-color: rgba(251, 191, 36, 0.4);
+    color: #fbbf24;
+
+    &:hover:not(:disabled) {
+      background: rgba(251, 191, 36, 0.3);
+      border-color: rgba(251, 191, 36, 0.6);
+    }
+  }
+}

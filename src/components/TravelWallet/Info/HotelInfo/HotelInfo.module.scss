@@ -1,0 +1,530 @@
+// HotelInfo Component Styles - Based on Figma Design
+.hotelInfo {
+  background: #ffffff;
+  border-radius: 0 16px 16px 0; // Rounded top-right and bottom-right
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  &.cancelled {
+    opacity: 0.6;
+    background: #f9f9f9;
+
+    .hotelName,
+    .refText,
+    .sectionTitle,
+    .bookingValue,
+    .bookingLabel {
+      color: #8c8c8c !important;
+    }
+
+    .actionButton {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
+
+// Header Section
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+}
+
+.headerLabel {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #485a6e;
+  letter-spacing: 0;
+}
+
+.closeButton {
+  border: none !important;
+}
+
+// Content Section
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+// Accommodation Reference
+.accommodationRef {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.refText {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #111820;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #111820;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// Divider
+.divider {
+  height: 1px;
+  background: #edeff1;
+  width: 100%;
+}
+
+// Hotel Card
+.hotelCard {
+  background: #ffffff;
+  border: 1px solid #edeff1;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 12px 40px 1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.hotelName {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #111820;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.cardRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+// Action Buttons
+.actionButtons {
+  display: flex;
+  gap: 16px;
+}
+
+.actionButton {
+  flex: 1;
+  max-width: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 32px;
+  padding: 4px 16px;
+  background: #ffffff;
+  border: 1px solid #dadee3;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #111820;
+
+  &:hover {
+    background: #f9f9f9;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Hotel Details (Expanded Content)
+.hotelDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.roomCard {
+  display: flex;
+  gap: 12px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.roomContent {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roomInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.roomName {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #2f3639;
+}
+
+.roomAmenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: #485a6e;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #485a6e;
+  }
+}
+
+.roomImage {
+  width: 147px;
+  height: 118px;
+  border-radius: 12px 8px 8px 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+// Check-in / Check-out
+.checkInOut {
+  display: flex;
+  gap: 48px;
+}
+
+.checkInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkLabel {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #485a6e;
+}
+
+.checkValue {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #111820;
+}
+
+// Room Policy
+.roomPolicy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 298px;
+}
+
+.policyItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    color: #485a6e;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #485a6e;
+  }
+}
+
+// Booking Details Toggle
+.bookingDetailsToggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bookingDetailsText {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: #111820;
+}
+
+// Booking Details Content
+.bookingDetails {
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.bookingDetailsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bookingRow {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.bookingInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.bookingFullWidth {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.bookingLabel {
+  font-family: var(--font-nexa);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #485a6e;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.bookingValue {
+  font-family: var(--font-nexa);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #111820;
+  white-space: nowrap;
+}
+
+.bookingDetailsButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 24px;
+  padding: 4px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+
+  span {
+    font-family: var(--font-nexa);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #111820;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: #111820;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    background: #f9f9f9;
+  }
+}
+
+// Section Title
+.sectionTitle {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: #2f3639;
+  margin: 0;
+}
+
+// Cancellation Policy
+.cancellationPolicy {
+  background: #ffffff;
+  border: 1px solid #edeff1;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 12px 40px 1px rgba(0, 0, 0, 0.06);
+}
+
+.policyWarning {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: #cf1322;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+}
+
+.policyText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #485a6e;
+  flex: 1;
+
+  strong {
+    font-weight: 700;
+    color: #111820;
+  }
+}
+
+// Hotel Contacts Section
+.hotelContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  height: 22px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: #485a6e;
+  }
+
+  p {
+    font-family: var(--font-nexa);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #485a6e;
+    margin: 0;
+    height: 16px;
+  }
+}
+
+.locationLink {
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  p {
+    color: #1d4ed8 !important;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+}
+
+.starRating {
+  :global(.ant-rate-star) {
+    color: #485a6e !important;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .hotelInfo {
+    padding: 16px;
+    border-radius: 0;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .checkInOut {
+    gap: 24px;
+  }
+
+  .roomCard {
+    flex-direction: column;
+  }
+
+  .roomImage {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+  }
+}

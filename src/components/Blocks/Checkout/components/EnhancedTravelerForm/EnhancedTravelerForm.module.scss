@@ -1,0 +1,124 @@
+.enhancedTravelerForm {
+  margin: 0 auto;
+}
+
+.progressSection {
+  margin-bottom: 32px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+.progressText {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.formContent {
+  margin-bottom: 0;
+}
+
+.passengerForms {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formSections {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+
+  :global(.ant-collapse-ghost > .ant-collapse-item) {
+    border-bottom: 1px solid #f0f0f0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  :global(.ant-collapse-ghost > .ant-collapse-item > .ant-collapse-header) {
+    padding: 20px 24px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #111820;
+
+    &:hover {
+      background-color: #fafafa;
+    }
+  }
+
+  :global(.ant-collapse-ghost > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box) {
+    padding: 0 24px 24px 24px;
+  }
+}
+
+.sectionPanel {
+  &:global(.ant-collapse-item-active) {
+    :global(.ant-collapse-header) {
+      background-color: #fafafa;
+    }
+  }
+}
+
+.autoSaveIndicator {
+  text-align: center;
+  padding: 8px;
+}
+
+.autoSaveText {
+  font-size: 12px;
+}
+
+.placeholderSection {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.actions {
+  display: flex;
+  width: 100%;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.backButton {
+  flex: 1;
+  width: 50%;
+  height: 40px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111820;
+}
+
+.completeButton {
+  flex: 1;
+  width: 50%;
+  height: 40px;
+  border-radius: 8px;
+  background: #111820;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+
+  &:hover {
+    background: #1f2937;
+  }
+
+  &:disabled {
+    background: #d1d5db;
+    color: #9ca3af;
+  }
+}

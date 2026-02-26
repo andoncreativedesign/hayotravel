@@ -1,0 +1,196 @@
+.header {
+  background: #fff;
+  &__inner {
+    margin: 0 var(--paddingXL);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--paddingSM) 0;
+    border-bottom: 1px solid var(--colorBorderSecondary, #edeff1);
+    box-sizing: border-box;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.backBtn {
+  margin-right: 12px;
+  font-size: 16px;
+  color: var(--neutral-gray-8, #485a6e);
+}
+
+.title {
+  margin: 0 !important;
+  line-height: 20px !important;
+  font-weight: 400 !important;
+  font-size: 14px !important ;
+  color: var(--colorText) !important;
+}
+
+.metaText {
+  font-size: 12px !important;
+  line-height: 22px !important;
+  font-weight: 400 !important;
+  color: var(--colorTextDescription) !important;
+}
+
+.titleWrapper {
+  align-items: center;
+}
+
+.downIcon {
+  font-size: 12px;
+  color: var(--neutral-gray-8, #485a6e);
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--colorText);
+  }
+}
+
+.itineraryBtn {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50% !important;
+  padding: var(--paddingSM) var(--paddingSM);
+  border: none !important;
+  box-sizing: border-box;
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+  &__wrapper {
+    padding: 2px;
+    width: 37px;
+    height: 37px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+    box-sizing: border-box;
+    /* Ensure crisp rendering */
+    transform: translateZ(0);
+    &:hover {
+      background: var(--primary-6) !important;
+    }
+  }
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: #52c41a;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 20;
+  border-radius: 50%;
+}
+
+.meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.conversationId {
+  font-size: 11px !important;
+  color: var(--colorTextTertiary) !important;
+  font-family: monospace;
+  background: var(--colorBgContainer);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--colorBorderSecondary);
+  font-weight: 500;
+}
+
+.chatId {
+  font-size: 11px !important;
+  color: var(--colorTextTertiary) !important;
+  font-family: monospace;
+  background: var(--colorBgContainer);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--colorBorderSecondary);
+  font-weight: 500;
+}
+
+:global(.ant-dropdown.chatDropdown) {
+  .ant-dropdown-menu {
+    background: #ffffff;
+    border-radius: 8px !important;
+    padding: 4px !important;
+    box-shadow:
+      0px 6px 16px 0px rgba(0, 0, 0, 0.08),
+      0px 3px 6px -4px rgba(0, 0, 0, 0.12),
+      0px 9px 28px 8px rgba(0, 0, 0, 0.05) !important;
+    min-width: auto !important;
+  }
+
+  .ant-dropdown-menu-item {
+    padding: 0px 12px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    border-radius: 4px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+
+    .ant-dropdown-menu-item-icon {
+      width: 16px !important;
+      height: 16px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .ant-dropdown-menu-title-content {
+      font-family:
+        "Nexa Text-Trial",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif !important;
+      font-weight: 400 !important;
+      font-size: 14px !important;
+      line-height: 1.57 !important;
+      color: #111820 !important;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04) !important;
+    }
+
+    &.ant-dropdown-menu-item-danger {
+      .ant-dropdown-menu-title-content {
+        color: #ff4d4f !important;
+      }
+
+      .ant-dropdown-menu-item-icon {
+        color: #ff4d4f !important;
+      }
+
+      &:hover {
+        background-color: rgba(255, 77, 79, 0.06) !important;
+      }
+    }
+  }
+}
+
+:global(.ant-modal.deleteModal) {
+  .ant-modal-content {
+    border-radius: 8px !important;
+    box-shadow:
+      0px 6px 16px 0px rgba(0, 0, 0, 0.08),
+      0px 3px 6px -4px rgba(0, 0, 0, 0.12),
+      0px 9px 28px 8px rgba(0, 0, 0, 0.05) !important;
+  }
+}

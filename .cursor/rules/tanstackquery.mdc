@@ -1,0 +1,5 @@
+---
+description: "always try to use tanstack query for requests"
+globs:
+alwaysApply: true
+---

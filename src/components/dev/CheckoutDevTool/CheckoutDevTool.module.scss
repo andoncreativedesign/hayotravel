@@ -1,0 +1,153 @@
+.devTool {
+  position: fixed;
+  bottom: 20px;
+  right: 70px;
+  z-index: 9999;
+  max-width: 300px;
+}
+
+.toggleButton {
+  background: #722ed1 !important;
+  border-color: #722ed1 !important;
+  box-shadow: 0 4px 12px rgba(114, 46, 209, 0.3);
+
+  &:hover {
+    background: #9254de !important;
+    border-color: #9254de !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(114, 46, 209, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.panel {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e8e8e8;
+  max-height: 70vh;
+  overflow-y: auto;
+
+  :global(.ant-card-head) {
+    padding: 12px 16px;
+    min-height: auto;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  :global(.ant-card-body) {
+    padding: 16px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  color: #722ed1;
+
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.scenarioButton {
+  text-align: left !important;
+  height: auto !important;
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  border-radius: 4px !important;
+
+  &:hover {
+    background-color: #f0f0f0 !important;
+    color: #1890ff !important;
+  }
+
+  // Style based on scenario type
+  &:nth-child(1),
+  &:nth-child(2) {
+    // Valid scenarios
+    border-left: 3px solid #52c41a;
+  }
+
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(8),
+  &:nth-child(9) {
+    // Invalid scenarios
+    border-left: 3px solid #ff4d4f;
+  }
+
+  &:nth-child(6),
+  &:nth-child(7),
+  &:nth-child(10) {
+    // Edge cases
+    border-left: 3px solid #faad14;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .devTool {
+    bottom: 10px;
+    right: 10px;
+    max-width: 280px;
+  }
+
+  .panel {
+    max-height: 60vh;
+  }
+}
+
+// Animation for smooth open/close
+.panel {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Custom scrollbar for the panel
+.panel {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+
+    &:hover {
+      background: #a8a8a8;
+    }
+  }
+}
